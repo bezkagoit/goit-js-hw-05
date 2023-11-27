@@ -1,15 +1,8 @@
-// Напиши стрілочну функцію sortByDescendingFriendCount(users) , яка прийматиме один параметр users — масив об’єктів користувачів.
-
-// Функція має повертати масив усіх користувачів, відсортованих за спаданням кількостій їх друзів (властивість friends).
-
-// // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
-// Оголошена змінна sortByDescendingFriendCount
-// Змінній sortByDescendingFriendCount присвоєна стрілочна функція з параметром (users)
-// Для перебирання параметра users використаний метод toSorted()
-// Виклик функції із зазначеним масивом users повертає новий масив користувачів, відсортований за спаданням кількості їхніх друзів
-// Виклик функції з випадковими, але валідними аргументами повертає правильне значення
-
-const sortByDescendingFriendCount = users => {};
+const sortByDescendingFriendCount = users =>
+  [...users].toSorted(
+    (firstFriend, secondFriend) =>
+      secondFriend.friends.length - firstFriend.friends.length
+  );
 
 console.log(
   sortByDescendingFriendCount([
